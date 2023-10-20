@@ -1,0 +1,283 @@
+$primary: #02557d;
+$secondary: #ffb749;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+
+);
+
+/* Details */
+.title::before {
+  content: "• ";
+  color: $secondary;
+}
+
+.title-line {
+  margin-top: -3px;
+}
+
+.btn.rounded-4.border-secondary:hover {
+  background-color: #ffb749;
+  color: white
+}
+
+.card.shadow-card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .title::before {
+    content: "";
+    color: $secondary;
+  }
+}
+
+/* Navbar */
+.navbar.fixed-top {
+  top: 50px;
+  position: fixed;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+#Navbar {
+  top: 40px;
+}
+
+.navbar.fixed-top.scrolled {
+  position: fixed;
+  top: 32px;
+  background-color: $primary;
+}
+
+#TopNav{
+  background-color: $primary;
+  transition: 0.3s;
+}
+
+#TopNav.scrolled{
+  background-color: white;
+}
+
+#TopNavText {
+  color: white;
+  transition: 0.3s;
+}
+
+#TopNavText.scrolled {
+  color: $primary;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#hero-container {
+  margin-top: 150px;
+}
+
+/* About us */
+.img-thumbnail {
+  width: 75%;
+}
+
+@media screen and (min-width: 992px) {
+  .img-thumbnail {
+    position: absolute;
+    top: -110px;
+    left: 200px;
+    width: 400px !important;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .img-thumbnail {
+    position: absolute;
+    top: -110px;
+    left: 300px;
+    width: 450px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  #hero-container {
+    margin-top: 150px;
+  }
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(rgb(2, 85, 125), 0.5);
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+  margin-top: 120px;
+}
+
+/* Benefits */
+.hero-benefits {
+  position: relative;
+  background-image: url("/images/benefits_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: auto;
+  overflow: hidden;
+}
+
+/* Study careers */
+.card-course {
+  display: flex;
+  position: relative;
+  background-color: rgba($primary, 0.8);
+  border-radius: 40px;
+  overflow: hidden;
+
+  &:hover .card-course-img {
+    transform: scale(1.1);
+  }
+
+  .card-course-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.2s; /* Animación suave */
+  }
+
+  .card-course-title {
+    z-index: 5;
+    position: absolute;
+    left: 20px;
+    bottom: 60px;
+    color: white;
+  }
+
+  .card-course-button {
+    z-index: 5;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+.card1 {
+  height: 400px;
+}
+
+.card2 {
+  height: 200px;
+}
+
+.card3 {
+  height: 220px;
+}
+
+/* Team */
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.card-team {
+  margin: auto;
+  border-radius: 20px;
+  position: relative;
+  background-color: white;
+  height: 390px;
+  width: 250px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  object-fit: cover;
+
+  .card-team-background-container {
+    width: 100%;
+    position: relative;
+
+    .card-team-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 125px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .card-team-profile-container{
+    .card-team-profile{
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      border-radius: 100%;
+      border: 5px solid white
+    }
+  }
+
+  .card-team-info {
+    margin-bottom: 70px;
+
+    .text-secondary.card-team-info-role{
+      margin-top: -10px;
+    }
+  }
+}
+
+/* Extra section  */
+.extra-img{
+  background-color: rgba($primary, 0.8);
+  background-image: url('images/architecture.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .card-course {
+    height: 300px;
+  }
+}
+
+@import "./node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
